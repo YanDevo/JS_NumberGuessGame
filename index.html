@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/JS_NumberGuessGame/styles/style.css">
+    <script src="/JS_NumberGuessGame/js/script.js" defer></script>
+    <title>Can You Guess It?</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Guess The Number</h1>
+    </div>
+    <div class="rules">
+        <p class="instructions">
+            We have selected a random between 1 & 100!
+        </p>
+        <p class="instructions">
+            Can you guess what it is?
+        </p>
+        <p class="instructions">
+            You have 10 turns & We will let you know if your guess is too high or too low.
+        </p>
+    </div>
+
+    <div class="form">
+        <label for="guessField">Enter Your Guess:</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit Guess" class="guessSubmit">
+    </div>
+
+    <div class="results">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="hiOrLow"></p>
+    </div>
+
+</body>
+</html>
