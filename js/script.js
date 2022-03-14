@@ -70,15 +70,15 @@
 
      const resetParas = document.querySelectorAll('.results p'); //selecting/referencing all child paragraphs in results
 
-     for(const resetpara of resetparas) { //looping through paragraphs in results 
-         resetpara.textContent = '';
+     for(const resetPara of resetParas) { //looping through paragraphs in results 
+         resetPara.textContent = '';
      } 
      
-     resetButton.parentNode.removechild(resetButton); // removing reset button that was previously added
+     resetButton.parentNode.removeChild(resetButton); // removing reset button that was previously added
 
      
      guessSubmit.disable = false;
-     guessField.disable = fase;
+     guessField.disable = false;
      guessField.value = ''; 
      guessField.focus();
 
