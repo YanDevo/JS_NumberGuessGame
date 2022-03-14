@@ -51,13 +51,38 @@
  guessSubmit.addEventListener('click', checkGuess);
  
  
+ //defining game over function
  setGameOver = () => {
      guessField.disable = true;
      guessSubmit.disable = true;
-     resetButton = document.createElement('button');
-     resetButton.textContent = 'Start New Game';
-     document.body.append(resetButton);
-     resetButton.addEventListener('click', resetGame);
+     resetButton = document.createElement('button');// creating a new html element(a button) using the DOM 
+     resetButton.textContent = 'Start New Game'; //
+     document.body.append(resetButton); // adding that button to the bottom of my existing HTML
+     resetButton.addEventListener('click', resetGame); // add an event listener to it to run a resetGame function, that I will define next!
  }
 
- 
+
+
+
+//  Defining the resetGame Function, Adding Reset Button and resetting game
+ resetGame = () => {
+     guessCount = 1
+
+     const resetParas = document.querySelectorAll('.results p'); //selecting/referencing all child paragraphs in results
+
+     for(const resetpara of resetparas) { //looping through paragraphs in results 
+         resetpara.textContent = '';
+     } 
+     
+     resetButton.parentNode.removechild(resetButton); // removing reset button that was previously added
+
+     
+     guessSubmit.disable = false;
+     guessField.disable = fase;
+     guessField.value = ''; 
+     guessField.focus();
+
+     lastResult.style.backgroundColor = 'white'
+
+     randomNum = Math.floor(Math.random() * 100 ) + 1;
+ }
